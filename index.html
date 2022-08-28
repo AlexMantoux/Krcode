@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRcode</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./Illustration_sans_titre.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbarcontent">
+            <a href="https://www.supportukraine.co/">#SupportUkraine🇺🇦🤍</a>
+        </div>
+    </nav>
+    <div class="title">
+        <h1>Welcome on Krcode</h1>
+    </div>
+    <div class="subtitle">
+        <div class="flexcontent">
+            <input type="text" id="linktext" placeholder="put your link here"></input>
+            <input type="submit" id="sbBtn" value="submit">
+        </div>
+        <div id="qrcode"></div>
+    </div>
+    <footer class="footerPage">
+        <div>
+            <p>♡ made with love ♡</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+
+        let linktext = document.querySelector('#linktext');
+        let sbBtn = document.querySelector('#sbBtn');
+        let link = sbBtn.addEventListener('click', (e)=>{
+            console.log(linktext.value)
+            new QRCode(document.getElementById("qrcode"), linktext.value,);
+        });
+
+    </script>
+
+    <script>
+        const titleAnim = document.querySelector(".title");
+        const searchBar = document.querySelector(".flexcontent");
+
+        window.addEventListener("load", (e) => {
+            let TL = gsap.timeline({ paused: true });
+
+            TL.from(titleAnim, 2.1, { opacity:0, ease: "power2.out" })
+                .from(searchBar, 2.1, { opacity: 0 }, "-=2.1");
+
+            TL.play();
+        });
+    </script>
+
+</body>
+</html>
