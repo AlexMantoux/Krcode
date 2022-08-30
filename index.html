@@ -6,29 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KRcode</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./Illustration_sans_titre.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbarcontent">
-            <a href="https://www.supportukraine.co/">#SupportUkraine🇺🇦🤍</a>
+    <div class="screen1">
+        <nav class="navbar">
+            <div class="navbarcontent">
+                <a href="https://www.supportukraine.co/">#SupportUkraine🇺🇦🤍</a>
+            </div>
+        </nav>
+        <div class="title">
+            <h1>Welcome on Krcode</h1>
+            <!-- <input type="color" id="html5colorpicker" onchange="clickColor(0, -1, -1, 5)" value="#ff0000" style="width:85%;"> -->
         </div>
-    </nav>
-    <div class="title">
-        <h1>Welcome on Krcode</h1>
-    </div>
-    <div class="subtitle">
-        <div class="flexcontent">
-            <input type="text" id="linktext" placeholder="put your link here"></input>
-            <input type="submit" id="sbBtn" value="submit">
+        <div class="subtitle">
+            <div class="flexcontent">
+                <input type="text" id="linktext" placeholder="put your link here"></input>
+                <input type="submit" id="sbBtn" value="submit">
+            </div>
+            <div id="qrcode"></div>
         </div>
-        <div id="qrcode"></div>
     </div>
-    <footer class="footerPage">
-        <div>
+
+
+    <footer class="footer">
+        <div class="footerPage">
             <p>♡ made with love ♡</p>
         </div>
     </footer>
